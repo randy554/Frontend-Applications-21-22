@@ -11,8 +11,6 @@ const Header = (props) => {
 
 // Dishes for menu
 const dishes = ["Red Red", "Jollof", "Bami", "Spaghetti"];
-// Create object to iterate over list items
-const dishesObject = dishes.map((dish, i) => ({ id: i, title: dish }));
 
 const Main = (props) => {
   console.log("Wat zit in props:", props);
@@ -37,21 +35,24 @@ const Footer = (props) => {
   );
 };
 
+// Create object to iterate over list items
+const dishesObject = dishes.map((dish, i) => ({ id: i, title: dish }));
+
 function App() {
   return (
     <div className="App">
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+        Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        className="App-link"
+        href="https://reactjs.org"
+        target="_blank"
+        rel="noopener noreferrer"
         >
-          Learn React
+        Learn React
         </a>
       </header> */}
       <Header name="Randy" />
