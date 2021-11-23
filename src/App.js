@@ -2,7 +2,6 @@
 import "./App.css";
 
 const Header = (props) => {
-  console.log(props);
   return (
     <header>
       <h1>{props.name}'s kitchen</h1>
@@ -10,18 +9,30 @@ const Header = (props) => {
   );
 };
 
-const Main = () => {
+// Dishes for menu
+const dishes = ["Red Red", "Jollof", "Bami", "Spaghetti"];
+// Create object to iterate over list items
+const dishesObject = dishes.map((dish, i) => ({ id: i, title: dish }));
+
+const Main = (props) => {
+  console.log("Wat zit in props:", props);
   return (
     <section>
-      <p>We serve the most delicious food around.</p>
+      We {props.activity} the most {props.adjective} {props.item} around.
+      {/* <p>We serve the most {props.adjective} food around.</p> */}
+      <ul>
+        {props.dishes.map((dish) => (
+          <li key={dish.id}>{dish.title}</li>
+        ))}
+      </ul>
     </section>
   );
 };
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <footer>
-      <p>It's true.</p>
+      <p> Copyright {props.year}</p>
     </footer>
   );
 };
@@ -44,8 +55,13 @@ function App() {
         </a>
       </header> */}
       <Header name="Randy" />
-      <Main />
-      <Footer />
+      <Main
+        adjective="amazing"
+        activity="move"
+        item="boxes"
+        dishes={dishesObject}
+      />
+      <Footer year={new Date().getFullYear()} />
     </div>
   );
 }
