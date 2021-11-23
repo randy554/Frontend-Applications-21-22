@@ -1,10 +1,11 @@
 // import logo from "./logo.svg";
 import "./App.css";
 
-const Header = () => {
+const Header = (props) => {
+  console.log(props);
   return (
     <header>
-      <h1>Eve's kitchen</h1>
+      <h1>{props.name}'s kitchen</h1>
     </header>
   );
 };
@@ -42,7 +43,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <Header />
+      <Header name="Randy" />
       <Main />
       <Footer />
     </div>
