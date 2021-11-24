@@ -73,24 +73,25 @@ const data = [
 
 // Create object to iterate over list items
 
-// const legendItems = data.map((legend, i) => ({
-//   id: i,
-//   legendName: legend.sourceName,
-//   legendColor: legend.backgroundColor,
-// }));
+export const legendItems = data.map((legend, i) => ({
+  id: i,
+  legendName: legend.sourceName,
+  legendColor: legend.backgroundColor,
+}));
 // console.log("werkt legendItems lijst?", legendItems);
 
 // Show legend on page
-const Legend = () => {
+const Legend = (props) => {
+  console.log("Wat zit in props:", props.listItem);
   return (
     <div id="legend">
-      {data.map((item, i) => (
-        <div id={i} className="legendBox">
+      {props.listItem.map((item, i) => (
+        <div id={item.id} className="legendBox">
           <span
             className="legendColor"
-            style={{ backgroundColor: item.backgroundColor }}
+            style={{ backgroundColor: item.legendColor }}
           >
-            <span className="legendText"> {item.sourceName}</span>
+            <span className="legendText"> {item.legendName}</span>
           </span>
         </div>
       ))}

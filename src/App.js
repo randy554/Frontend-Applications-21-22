@@ -2,7 +2,7 @@
 import "./App.css";
 import Title from "./components/Title/Title";
 import Filter from "./components/Filter/Filter";
-import Legend from "./components/Legend/Legend";
+import Legend, { legendItems } from "./components/Legend/Legend";
 import SvgBody from "./components/SvgBody/SvgBody";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Title />
       <Filter />
-      <Legend />
+      <Legend listItem={legendItems} />
       <SvgBody />
     </div>
   );
