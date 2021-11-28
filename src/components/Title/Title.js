@@ -15,6 +15,7 @@ const Title = () => {
       <button
         type="button"
         onClick={() => {
+          // If the text field is not empty then take the value and set it as the new topic
           if (document.querySelector("#TopicInput").value) {
             setTopic(document.querySelector("#TopicInput").value);
           }
