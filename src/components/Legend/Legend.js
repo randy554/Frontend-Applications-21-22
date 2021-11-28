@@ -84,7 +84,7 @@ const Legend = (props) => {
   return (
     <div id="legend">
       {props.listItem.map((item) => (
-        <div id={item.id} className="legendBox">
+        <div key={item.id} className="legendBox">
           <span
             className="legendColor"
             style={{ backgroundColor: item.legendColor }}
