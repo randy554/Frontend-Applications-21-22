@@ -55,6 +55,9 @@ export function Whoops404() {
   return (
     <div>
       <h1>Page: @{location.pathname} does not exist!</h1>
+      <nav>
+        <Link to="/">Home</Link>
+      </nav>
     </div>
   );
 }
