@@ -5,6 +5,7 @@ import SvgBody from "../../SvgBody/SvgBody";
 // import Visualization from "../../Visualization";
 import BarChart from "../../Barchart";
 import { dataByYear } from "../../data";
+import { newsData } from "../../../data/newsData";
 
 // Home page
 const Home = () => {
@@ -13,7 +14,7 @@ const Home = () => {
       <Title />
       <Filter />
       <Legend listItem={legendItems} />
-      <SvgBody />
+      <SvgBody data={newsData} />
       {/* <Visualization /> */}
       <BarChart data={dataByYear} />
     </>

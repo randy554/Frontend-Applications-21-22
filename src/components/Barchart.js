@@ -1,5 +1,5 @@
-import useD3 from "./useD3";
 import React from "react";
+import useD3 from "./useD3";
 import * as d3 from "d3";
 
 function BarChart({ data }) {
