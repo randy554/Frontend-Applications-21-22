@@ -1,6 +1,7 @@
 import React from "react";
 import useD3 from "../useD3";
 import * as d3 from "d3";
+import centerCircleText from "../../helpers/positionText";
 
 // Create svg element
 const SvgBody = ({ data }) => {
@@ -18,6 +19,55 @@ const SvgBody = ({ data }) => {
       //update the scales
       xscale.domain([0, d3.max(data, (d) => d.articleCount)]);
       cscale.domain(data.map((d) => d.sourceName));
+
+      // Render the chart with new data
+      // DATA JOIN use the key argument for ensurign that the same DOM element is bound to the same data-item
+      try {
+        // eslint-disable-next-line
+        const circles = g
+          .selectAll("g")
+          .data(data, (d) => d.sourceName)
+          .join(
+            // ENTER
+            // new elements
+            (enter) => {
+              let g = enter
+                .append("g")
+                .attr("transform", (d, i) => `translate(${30 + i * 60},0)`);
+
+              // eslint-disable-next-line
+              let circles = g
+                .append("circle")
+                .transition()
+                .attr("r", (d) => {
+                  return xscale(d.articleCount);
+                })
+                .duration(1000)
+                .style("fill", cscale);
+
+              // eslint-disable-next-line
+              let text = g
+                .append("text")
+                .text((d) => {
+                  return d.sourceName;
+                })
+                .attr("y", (d) => xscale(d.articleCount) + 20)
+                .attr("x", (d) => centerCircleText(d.sourceName.length));
+
+              // eslint-disable-next-line
+              let title = g
+                .append("title")
+                .text((d) => d.sourceName + " " + `(${d.articleCount})`);
+              return enter;
+            },
+            // UPDATE
+            // update existing elements
+            (update) => update,
+            // EXIT
+            // elements that aren't associated with data
+            (exit) => exit.remove()
+          );
+      } catch (e) {}
     },
     [data.length]
   );
