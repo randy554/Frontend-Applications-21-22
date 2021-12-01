@@ -79,7 +79,7 @@ Maak een client-side applicatie in JavaScript die data dynamisch weergeeft door 
  ## Concept
  
  
- #### [Live demo]()
+ #### [Live demo](https://frontend-applications-21-22.vercel.app/)
  
 Op deze website kunt u zien hoeveel corona-gerelateerde artikelen de afgelopen tijd door media zijn gepubliceerd. De gegevens worden weergegeven via een proportional area chart. Een paar features van de app:
 
@@ -92,8 +92,18 @@ Op deze website kunt u zien hoeveel corona-gerelateerde artikelen de afgelopen t
  
  ## Inhoudsopgave
  
-   * [Frontend Applications](#frontend-applications-21-22)
- 
+ - [Frontend-Application-21-22](#frontend-application-21-22)
+  * [Assignment & Assessment](#assignment---assessment)
+  * [Concept](#concept)
+  * [Inhoudsopgave](#inhoudsopgave)
+  * [API](#api)
+  * [Installatie](#installatie)
+  * [Credits](#credits)
+  * [Bronnen](#bronnen)
+  * [Licentie](#licentie)
+
+
+
  
  ## API
  
