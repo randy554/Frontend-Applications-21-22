@@ -86,7 +86,9 @@ Op deze website kunt u zien hoeveel corona-gerelateerde artikelen de afgelopen t
 * Het aantal gepubliceerde artikelen zien via een hover op de cirkel. 
 * Filter op binnenlandse/buitenlandse media.
 
-
+ [![concept-with-hover-cut.gif](https://i.postimg.cc/rmLYxdnW/concept-with-hover-cut.gif)](https://postimg.cc/JyPqWhW4)
+ 
+ [![concept-with-filter.gif](https://i.postimg.cc/vTQdS37z/concept-with-filter.gif)](https://postimg.cc/G8SN4P58)
  
  ## Inhoudsopgave
  
