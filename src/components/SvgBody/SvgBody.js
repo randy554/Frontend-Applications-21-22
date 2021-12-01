@@ -56,7 +56,7 @@ const SvgBody = ({ data }) => {
 
               // eslint-disable-next-line
               let title = g
-                .append("title")
+                .append("title") // eslint-disable-next-line
                 .text((d) => d.sourceName + " " + `(${d.articleCount})`);
               return enter;
             },
