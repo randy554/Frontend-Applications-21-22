@@ -1,0 +1,23 @@
+#legend {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.legendBox {
+  margin: 2px 0;
+  /* margin: 6px 1px; */
+}
+
+.legendColor {
+  width: 10px;
+  height: 10px;
+  /* padding: 5px; */
+}
+
+.legendText {
+  background-color: white;
+  margin-left: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
