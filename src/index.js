@@ -10,6 +10,11 @@ import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
+    {/* 
+      Door: <Router> wrappen om <App />, 
+      heeft <App /> toegang tot <Router> properties als location & history  
+      */}
+
     <App />
   </React.StrictMode>,
   document.getElementById("root")
