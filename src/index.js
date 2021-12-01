@@ -7,7 +7,6 @@ import "./components/Legend/Legend.css";
 import "./components/SvgBody/SvgBody.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,9 +14,8 @@ ReactDOM.render(
       Door: <Router> wrappen om <App />, 
       heeft <App /> toegang tot <Router> properties als location & history  
       */}
-    <Router>
-      <App />
-    </Router>
+
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
