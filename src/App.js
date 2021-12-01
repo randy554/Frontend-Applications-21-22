@@ -5,22 +5,26 @@ import Filter from "./components/Filter/Filter";
 import Legend, { legendItems } from "./components/Legend/Legend";
 import SvgBody from "./components/SvgBody/SvgBody";
 import { Routes, Route } from "react-router-dom";
-import { Home, About, Events, Contact, Whoops404 } from "./pages";
+import Home from "./components/Pages/Home/Home";
+import About from "./components/Pages/About/About";
+import Contact from "./components/Pages/Contact/Contact";
+import Whoops404 from "./components/Pages/Whoops404/Whoops404";
+import Navigation from "./components/Navigation/Navigation";
 
 function App() {
   return (
     <div className="App">
-      {/* <Title />
+      <Title />
       <Filter />
       <Legend listItem={legendItems} />
-      <SvgBody /> */}
+      <SvgBody />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/events" element={<Events />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Whoops404 />} />
       </Routes>
+      <Navigation />
     </div>
   );
 }
