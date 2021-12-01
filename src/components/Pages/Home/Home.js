@@ -1,14 +1,17 @@
+import Title from "../../Title/Title";
+import Filter from "../../Filter/Filter";
+import Legend, { legendItems } from "../../Legend/Legend";
+import SvgBody from "../../SvgBody/SvgBody";
+
 // Home page
 const Home = () => {
   return (
-    <div>
-      <h1>[Company web]</h1>
-      <nav>
-        {/* <Link to="/about">About</Link>
-          <Link to="/events">Events</Link>
-          <Link to="/contact">Contact</Link> */}
-      </nav>
-    </div>
+    <>
+      <Title />
+      <Filter />
+      <Legend listItem={legendItems} />
+      <SvgBody />
+    </>
   );
 };
 
