@@ -14,7 +14,6 @@ const Home = () => {
       <Filter />
       <Legend listItem={legendItems} />
       <SvgBody data={newsData} />
-      <BarChart data={dataByYear} />
     </>
   );
 };
