@@ -137,6 +137,7 @@ Om nieuwsartikelen te krijgen heb ik gebruik gemaakt van de [NewsAPI](https://ne
 
 #### Docenten/coaches
 - [Vincent Vijn](https://github.com/vijnv)
+- [Angelo Michel](https://github.com/angelomichel)
 
 
 #### Team 3
