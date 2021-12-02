@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./Title.css";
 
 // Show title on page
 const Title = () => {

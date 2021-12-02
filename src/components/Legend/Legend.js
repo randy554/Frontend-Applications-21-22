@@ -1,3 +1,4 @@
+import "./Legend.css";
 const data = [
   {
     sourceName: "Nu.nl",

@@ -2,6 +2,7 @@ import React from "react";
 import useD3 from "../useD3";
 import * as d3 from "d3";
 import centerCircleText from "../../helpers/positionText";
+import "./SvgBody.css";
 
 // Create svg element
 const SvgBody = ({ data }) => {
