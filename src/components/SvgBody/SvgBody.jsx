@@ -16,6 +16,7 @@ const SvgBody = () => {
         return;
       }
 
+      // Remove previous group element
       svg.selectAll("g").remove();
       console.log("Wat is die data binnen SvgBody?", data);
       console.log("Wat is die svg binnen SvgBody?", svg);
