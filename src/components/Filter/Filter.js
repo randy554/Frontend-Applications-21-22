@@ -1,3 +1,4 @@
+import "./Filter.css";
 // Show filters on page
 const Filter = () => {
   return (

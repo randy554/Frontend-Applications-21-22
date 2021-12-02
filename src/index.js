@@ -1,10 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import "./components/Title/Title.css";
-import "./components/Filter/Filter.css";
-import "./components/Legend/Legend.css";
-import "./components/SvgBody/SvgBody.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
