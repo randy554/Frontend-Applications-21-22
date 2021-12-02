@@ -6,7 +6,7 @@ import Whoops404 from "./components/Pages/Whoops404/Whoops404";
 import Navigation from "./components/Navigation/Navigation";
 import { NewsArticleProvider } from "./components/providers/newsArticleProvider";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <NewsArticleProvider>
@@ -21,6 +21,6 @@ function App() {
       </NewsArticleProvider>
     </Router>
   );
-}
+};
 
 export default App;
