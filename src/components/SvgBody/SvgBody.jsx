@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import useD3 from "../../hooks/useD3";
 import * as d3 from "d3";
 import centerCircleText from "../../helpers/positionText";
 import "./SvgBody.css";
+import NewsArticleContext from "../providers/newsArticleProvider";
 
 // Create svg element
-const SvgBody = ({ data }) => {
+const SvgBody = () => {
+  const { filteredData } = useContext(NewsArticleContext);
+  const data = filteredData;
+
   const ref = useD3(
     (svg) => {
+      if (!data) {
+        return;
+      }
+
+      svg.selectAll("g").remove();
       console.log("Wat is die data binnen SvgBody?", data);
       console.log("Wat is die svg binnen SvgBody?", svg);
 
@@ -70,7 +79,7 @@ const SvgBody = ({ data }) => {
           );
       } catch (e) {}
     },
-    [data.length]
+    [data]
   );
 
   return <svg ref={ref}></svg>;
