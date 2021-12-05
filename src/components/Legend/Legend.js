@@ -1,28 +1,24 @@
 import "./Legend.css";
-import { newsData } from "../../data/newsData";
-
-// Create object to iterate over list items
-export const legendItems = newsData.map((legend, i) => ({
-  id: i,
-  legendName: legend.sourceName,
-  legendColor: legend.backgroundColor,
-}));
+import React, { useContext } from "react";
+import NewsArticleContext from "../providers/newsArticleProvider";
 
 // Show legend on page
-const Legend = (props) => {
-  console.log("Wat zit in props:", props.listItem);
+const Legend = () => {
+  const { filteredData } = useContext(NewsArticleContext);
+
   return (
     <div id="legend">
-      {props.listItem.map((item) => (
-        <div key={item.id} className="legendBox">
-          <span
-            className="legendColor"
-            style={{ backgroundColor: item.legendColor }}
-          >
-            <span className="legendText"> {item.legendName}</span>
-          </span>
-        </div>
-      ))}
+      {filteredData !== undefined &&
+        filteredData.map((item, id) => (
+          <div key={id} className="legendBox">
+            <span
+              className="legendColor"
+              style={{ backgroundColor: item.backgroundColor }}
+            >
+              <span className="legendText"> {item.sourceName}</span>
+            </span>
+          </div>
+        ))}
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import Title from "../../Title/Title";
 import Filter from "../../Filter/Filter";
-import Legend, { legendItems } from "../../Legend/Legend";
+import Legend from "../../Legend/Legend";
 import SvgBody from "../../SvgBody/SvgBody";
 import { newsData } from "../../../data/newsData";
 
@@ -10,7 +10,7 @@ const Home = () => {
     <>
       <Title />
       <Filter />
-      <Legend listItem={legendItems} />
+      <Legend />
       <SvgBody data={newsData} />
     </>
   );
