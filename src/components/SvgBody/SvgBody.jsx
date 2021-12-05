@@ -18,8 +18,7 @@ const SvgBody = () => {
 
       // Remove previous group element
       svg.selectAll("g").remove();
-      console.log("Wat is die data binnen SvgBody?", data);
-      console.log("Wat is die svg binnen SvgBody?", svg);
+      console.log("Binnen SvgBody");
 
       const cscale = d3.scaleOrdinal().range(d3.schemePaired);
       const xscale = d3.scaleSqrt().range([0, 50]);
