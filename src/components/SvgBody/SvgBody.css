@@ -4,6 +4,7 @@ circle:hover {
 }
 
 svg {
+  background-color: #292d3e;
   border: 1px solid lightgrey;
   width: 960px;
   height: 600px;
