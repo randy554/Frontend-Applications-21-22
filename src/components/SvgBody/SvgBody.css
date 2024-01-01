@@ -1,3 +1,6 @@
+text {
+  fill: white;
+}
 circle:hover {
   stroke: black;
   stroke-width: 2;
